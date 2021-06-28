@@ -8,38 +8,17 @@ const ExpenseForm = (props) => {
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
 
-    // const [userInput, setUserInput] = useState ({
-    //     enteredTitle: '',
-    //     enteredAmount: '',
-    //     enteredDate: ''
-    // })
-
     const titleChangeHandler = (e) => {
-        // setUserInput((prevState) => {
-        //     return { ...prevState, enteredTitle: e.target.value}
-        // })
-        // setUserInput({
-        //     ...userInput,
-        //     enteredTitle: e.target.value
-        // })
         setEnteredTitle(e.target.value)
     };
 
     
     const amountChangeHandler = (e) => {
-        // setUserInput({
-        //     ...userInput,
-        //     enteredAmount: e.target.value
-        // })
         setEnteredAmount(e.target.value)
     };
 
     
     const dateChangeHandler = (e) => {
-        // setUserInput({
-        //     ...userInput,
-        //     enteredDate: e.target.value
-        // })
         setEnteredDate(e.target.value)
     };
 

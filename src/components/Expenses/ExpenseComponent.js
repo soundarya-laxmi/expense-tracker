@@ -11,9 +11,6 @@ const ExpenseComponent = props => {
     const [filteredYear, setFilteredYear] = useState('2020');
 
     const filterYearHandler = (selectedYear) => {
-        // const filteredYearData = {
-        //     ...selectedYear,
-        // };
         setFilteredYear(selectedYear);
         props.onFilterYearData(filteredYear);
     }
@@ -26,31 +23,6 @@ const ExpenseComponent = props => {
                 <ExpensesFilter selected={filteredYear} onFilterYear={filterYearHandler} />
                 <ExpensesChart yearSpecificExpenses={yearSpecificExpenses} />
                 <ExpenseList yearSpecificExpenses={yearSpecificExpenses} />
-
-
-
-                {/* {yearSpecificExpenses.length === 0 ? (
-                <p> No items found </p>
-                ) : (
-                    yearSpecificExpenses.map (expense => 
-                    <ExpenseItem
-                        key={expense.id}
-                        title={expense.title}
-                        amount={expense.amount}
-                        date={expense.date}
-                    />
-                ))} */}
-
-                {/* {yearSpecificExpenses.length === 0 && (<p> No items found </p>) }
-                {yearSpecificExpenses.length > 0 && yearSpecificExpenses.map (expense => 
-                    <ExpenseItem
-                        key={expense.id}
-                        title={expense.title}
-                        amount={expense.amount}
-                        date={expense.date}
-                    />
-                )}    
-                  */}
             </Card>
         </li>
     );
